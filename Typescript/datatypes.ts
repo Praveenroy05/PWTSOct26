@@ -92,10 +92,10 @@ let num13: null = null
 
 // 5. undefined - You have defined a variable but have not assigned any value to it.
 
-let num14 : undefined = undefined
+let num14 : undefined = undefined;
 
-let num15
-console.log(num15)
+let num15;
+console.log(num15);
 
 
 // Note: 1. By default any type of variable will have a value as "undefined"
