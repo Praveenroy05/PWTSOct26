@@ -123,12 +123,43 @@ console.log("**********************************************");
 
     
 
+   //  1. AND (&&) 
+
+   // true && true - true
+   // true && false - false
+   // false && true - false
+   // false && false  - false
+
+   console.log("And &&", (10>6) && (10>8)) // true
+   console.log("And &&", (10>6) && (10>80)) // false
+   console.log("And &&", (10>60) && (10>8)) // false
+   console.log("And &&", (10>60) && (10>80)) // false
+   
+
+   // 2. OR (||)
+
+   // true  || true - true
+   // true  || false - true
+   // false || true - true
+   // false || false  - false
+
+   console.log("OR ||", (10>6) || (10>8)) // true
+   console.log("OR ||", (10>6) || (10>80)) // true
+   console.log("OR ||", (10>60) || (10>8)) // true
+   console.log("OR ||", (10>60) || (10>80)) // false
     
 
+   // NOT (!) - Reverses the result
 
+   console.log(!(10 > 5)) // !(true)
+   
     
 
+// 4. Assignment Operator (=) - Assign the value to a variable
+
+let m  = 90
     
+// = , == , ===
      
     
     
