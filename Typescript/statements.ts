@@ -97,6 +97,136 @@ else{
 
 */
 
+let browser = "edge"
+
+if(browser == "chrome"){ // "edge" == "chrome"
+    console.log("Launch the chrome browser");
+}
+else if(browser == "firefox"){ // "edge" == "firefox"
+    console.log("Launch the firefox browser");   
+}
+else if(browser == "safari"){ // "edge" == "safari"
+    console.log("Launch the safari browser");
+}
+else{
+    console.log("Invalid browser");
+}
+
+
+// 4. switch statement - Switch will compare with the case value. It checks if
+// any of the case value is available as similar to the expression or not. If it
+// is available it will directly jump to the particular block of code
+
+
+// Syntax:
+
+let i = 10
+
+/*
+
+switch(expression){
+
+    case "value":
+        // block of code
+        break
+    case "value":
+        // block of code
+        break
+    default:
+        // block of code
+
+
+}
+
+// break keyword is mandatory in switch statement - it terminates the execution
+
+
+*/
+
+
+let browserName = "firefox"
+
+switch(browserName){ // switch("firefox")
+
+    case "chrome":
+        console.log("Launch the chrome browser - switch");
+        break
+        
+    case "firefox":
+        console.log("Launch the firefox browser - switch");
+        break
+        
+    case "safari":
+        console.log("Launch the safari browser - switch");
+        break
+    default:
+        console.log("Invalid browser - switch");
+ 
+}
+
+
+// When to use if else if statement
+// 1. Range available in the condition to validate
+// 2. Multiple datatypes to be validated - name= "Rahul", age = 25
+// 3. Logical operator for validation && , ||
+
+// When to use switch statement
+// 1. Simple validation with single datatype and single value to compare
+// 2. Should not have range in comparison
+// 3. No logical operator
+
+
+
+// 5. Ternary Operator ( ? :) - This is similar to if else but it use inline
+
+// Syntax for if else:
+
+/*
+
+if (condition){
+    // if block of code
+}
+else{
+    
+    // else block of code
+}
+
+
+*/
+
+// Syntax for Ternary Operator:
+
+/*
+condition ? execute this if true : execute this if false
+
+
+*/
+
+let age = 20;
+
+// if (age >= 18){ // 10 >=18
+//     console.log("You are eligible for voting");
+// }
+// else{
+//     console.log("You are not eligible for voting");
+// }
+
+
+(age >=18) ? console.log("You are eligible for voting") : console.log("You are not eligible for voting");
+
+
+
+// Assignment:
+
+// Write a program to display the grade of a student
+
+
+// >90 - A
+// >80 && <90 - B
+// >70 && <80 - C
+// >50 && <70 - D
+// <=50 - Failed
+
 
 
 
