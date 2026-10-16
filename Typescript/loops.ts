@@ -62,7 +62,7 @@ console.log("*********************************")
 
 // 10 ...1
 
-for(i=10; i>0; i--) // i>0 , i>=1
+for(let i=10; i>0; i--) // i>0 , i>=1
 {
     // 10.....1
     if(i==5){
@@ -75,3 +75,50 @@ for(i=10; i>0; i--) // i>0 , i>=1
 // break - Exit a loop when a certain condition is met
 // continue - To skip the current iteration and move to the next iteration
 
+
+// 2. while loop
+
+/*
+
+initialization - let j = 1
+
+while(condition){
+    // code
+    increment/decrement
+}
+
+
+*/
+
+
+let attempt = 1
+
+while(attempt>=3){
+    console.log("Please enter the username or password again");
+    attempt++
+}
+
+
+console.log("***********************************")
+
+// 3. do while loop
+
+/*
+
+initialisation - let k =1
+
+do
+{
+    // code be to executed
+}while(condition)
+
+
+*/
+
+
+let attempts = 1
+
+do{
+    console.log("Please enter your usename or password - do");
+    attempts++
+}while(attempts>=3);
