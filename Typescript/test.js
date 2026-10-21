@@ -130,3 +130,12 @@ do{
     console.log("Please enter your usename or password - do");
     attempts++
 }while(attempts>=3);
+
+
+function loginIntoApplication1(username, password){
+    console.log("Fill the username " + username)
+    console.log("Fill the password " + password)
+    console.log("Click on the login button")   
+}
+
+loginIntoApplication1()
