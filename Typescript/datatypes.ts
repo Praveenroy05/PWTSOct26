@@ -78,8 +78,8 @@ console.log(multiline);
 
 let age = 18
 
-let message  = `Your age is ${age}`
-console.log(message)
+let message1  = `Your age is ${age}`
+console.log(message1)
 
 
 // 3. boolean - true/false

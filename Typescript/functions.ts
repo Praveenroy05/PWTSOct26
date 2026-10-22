@@ -100,7 +100,7 @@ loginIntoApplication("Login", "Password") // Login, Password - arguments
 
 // 4. Parametrised and returning function
 
-function add(a:number, b:number){
+function add(a:number, b:number):number{
     return a+b
 }
 
@@ -150,7 +150,90 @@ functionName(arguments)
 */
 
 
+let message = function(name:string, age:number):void{
+    console.log(`Your name is ${name} and age is ${age}`)
+}
+
+message("Rahul", 25)
+message("John", 34);
+
+
+
+// 3. Arrow Function - Function Expression(=>) - Lambda function - ES 6 - 2015
+
+// 1. This is also a part of anonymous function and wil not have any name
+// 2. This function will be declred using (=>) arrow symbol after the paranthesis
+// 3. Arrow function use to shorten the number of lines of code
+// 4. If there is only one line of code inside the function then we can skip the curly braces
+// inside the arrow function. 
+
+// Syntax:
+/*
+
+let variable = (params) =>{
+
+ // code
+}
+
+variable(arg)
+
+
+
+let message = function(name:string, age:number):void{
+    console.log(`Your name is ${name} and age is ${age}`)
+}
+*/
+
+let message2 = (name:string, age:number) => (`Your name is ${name} and age is ${age}`)
+
+let res = message2("Priya", 27)
+console.log(res);
 
 
 
 
+// Method overloading - Is a process where you can declare the same method with differem parameters
+
+// This is not allowed in JS & TS by default
+
+// function sum1(a:number,b:number){
+
+// }
+
+// function sum1(a:number, b:number, c:number){
+
+// }
+
+
+
+// Default parameter and optional parameter
+
+function addition(a:number=100, b:number=200){
+    console.log(a+b);
+}
+
+
+addition(10,20)
+addition(500)
+addition()
+
+
+
+// Optional Parameter (p?) - A parameter which may or may not be provided with 
+// the value during the function call
+
+
+function display(name?:string, age?:number){
+    console.log(name, age);
+}
+
+display("Jyoti")
+display("Jyoti", 24)
+
+// Note: If you have only 1 Optional parameter or default parameter it should be
+// the last parameter inside the function
+
+
+// Assignment - Complete the "display" function by writing the logic to print only
+// name if the age parameter has not been given any value and print both name and age
+// if age value has also been given at the time of calling the function.
