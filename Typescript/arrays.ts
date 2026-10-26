@@ -114,8 +114,86 @@ arr5.pop()
 console.log(arr5);
 
 
+// 3. unshift(ele1, ele2, ele3,....) - It adds the element to the beginning of an array
+arr5.unshift("Java", 50)
+console.log(arr5);
+
+// 4. shift() - It removes the first element from an array
+
+arr5.shift()
+console.log(arr5);
+
+
+// What is difference between push() and unshift()?
+// What is difference between pop() and shift()?
+
+// What is difference between slice() and splice()?
+
+// 5. splice(startIndex, deleteCount, ele1, ele2,....) - Add/Remove the element
+// from the array at the specified index
+
+// startIndex - The position where you want to add/delete the element
+// deleteCount - The number of element that you want to delete
+// ele1, ele2, ele3,.... - The elements that you want to add at the startIndex
+
+let arr6 = [10,20,30,40,"TS", 50, 60]
+
+console.log(arr6);
+
+arr6.splice(2, 0, "Java", 100, 200, 300, 500)
+console.log(arr6)
+
+// 6. slice(startIndex?, endIndex?) - Returns the portion of an element from 
+// start Index to endIndex
+
+// startIndex - The position where you want to start the slice
+// endIndex(Exclusive) - The position where you want to end the slice
+
+console.log(arr6.slice(1,6))
+console.log(arr6.slice(0,7))
 
 
 
+// 7. indexOf(element, startIndex?) - Returns the index of first occurances of
+// an element in the array or -1 if not found
 
+//arrrayName.indexOf(element, startIndex?)
+
+let arr7 = [10,20,30,40,50,10,30,10,70,10]
+
+let index = arr7.indexOf(10, 3)
+console.log(index)
+
+let index1 = arr7.indexOf(10, 8)
+console.log(index1)
+
+
+// Assignment - 1:
+// To find out all the index of 10 available inside arr7 - 0, 5, 7, 9
+
+// 8. lastIndexOf(element startIndex?) - Return the index of last occurances of 
+// an element inside an array
+
+console.log(arr7.lastIndexOf(10, 6))
+console.log(arr7.lastIndexOf(10))
+
+
+// 9. includes(element) - Return true if the element is found in the array
+// otherwise false
+
+console.log(arr7.includes(70))
+console.log(arr7.includes(500))
+
+// 10. join(separator) - Joins all the elements of an array and return 
+// as a string
+
+let arr8 = [20,12,2026,3002, 5000] // dd-mm-yyyy
+console.log(arr8)
+
+let joinResult = arr8.join("-")
+console.log(joinResult);
+
+
+// 11. toString() - Convert the array into string
+console.log(arr8.toString())
 
