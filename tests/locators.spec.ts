@@ -109,9 +109,13 @@ In xpath the index starts from 1
 
 1. //*[@attribute='value'] - Slower in terms of finding
 
+    //*[@id='username']
+
 2. //tagname[@attribute='value'] - faster
 
-(//input)[2]
+(//input)[2] 
+
+//input[@id='username']
 
 AXES - xpath
 
@@ -136,6 +140,14 @@ Syntax:
 
 //div[@id='userEmail-wrapper']/preceding-sibling::div[@id='userName-wrapper']
 
+
+//label[@for='username']//following-sibling::input
+
+//input[@id='username']/preceding-sibling::label
+
+
+
+
 //div[@id='userName-wrapper']/following-sibling::div - It might identify mutliple elements
 
 //div[@id='userName-wrapper']/following-sibling:://h2[text()='Test login']
@@ -151,11 +163,14 @@ Syntax:
 
 //h2[text()='Test login']
 
+
 // 2. By using partial text value of an element
 
-//* or tagname[contains(text(), 'Partial text value of an element')]
+//* or tagname[contains(text(), 'Partial text value')]
 
 //*[contains(text(), 'negative LogIn tests')]
+
+//li[contains(text(), 'engineers need to automate')]
 
 
 This is a simple Login page. Students can use this page 
