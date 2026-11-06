@@ -231,6 +231,10 @@ count(//th[text()='CPU (%)']/preceding-sibling::th) - 4
 Note: Whenever you write a locator by using CSS Selector or XPATH, we will use:
 page.locator("css selector or xpath")
 
+Example: 
+page.locator("#username")
+page.locator("//input[@id='username']")
+
 
 
 
@@ -263,6 +267,7 @@ radio - type = 'radio' - role - radio
 checkbox - type= "checkbox" - role- checkbox
 link - <a> - role - link
 
+page.getByRole('heading', {name:'Student Registration Form'})
 page.getByRole("checbox", {name:"Sports"})
 
 
@@ -278,8 +283,8 @@ page.getByText("Email", {exact:true}) - This will identify only the first elemen
 
 3. page.getByLabel()
 
-    1. When you have "for" as an attribute for an element that have been developed using <label> - 
-    THere we can directly use page.getBylabel("label text")
+    1. When you have "for" as an attribute for an element that have been developed 
+    using <label> - There we can directly use page.getBylabel("label text")
     2. When you find out <input> inside the <label> - 
     <label class="abcd" <input....>> Tuesday</label>
 
@@ -317,3 +322,12 @@ On regular basis we will be using the below locators:
 codegen  - Code Generation - automatic locator
 
 */
+
+import {test, expect} from '@playwright/test'
+
+test("Locators understanding", async function({page}){
+    await page.goto("https://demoqa.com/automation-practice-form")
+    await page.getByPlaceholder("First Name").fill("Testing")
+    await page.getByRole()
+
+})
