@@ -228,8 +228,14 @@ count(//th[text()='CPU (%)']/preceding-sibling::th) - 4
 
 //td[text()='Chrome']/following-sibling::td[count(//th[text()='CPU (%)']/preceding-sibling::th)]
 
+
+
+
 Note: Whenever you write a locator by using CSS Selector or XPATH, we will use:
 page.locator("css selector or xpath")
+
+
+
 
 Example: 
 page.locator("#username")
@@ -328,6 +334,6 @@ import {test, expect} from '@playwright/test'
 test("Locators understanding", async function({page}){
     await page.goto("https://demoqa.com/automation-practice-form")
     await page.getByPlaceholder("First Name").fill("Testing")
-    await page.getByRole()
+    // await page.getByRole()
 
 })
