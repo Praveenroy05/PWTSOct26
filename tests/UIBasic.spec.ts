@@ -42,3 +42,46 @@ test("Login into application using valid credentials", async ({page})=>{
     await expect(page.getByRole("link", {name:'Log out'})).toBeVisible()
 
 })
+
+test("Handling radio button and checkbox", async ({page})=>{
+    await page.goto("https://testautomationpractice.blogspot.com/")
+    // click() - Click on an element
+    // check() - It validates if the element is already checked, if it is not selected
+    // then it click on an element. Only works for Radio button or checkbox element
+
+    // uncheck() - It validates if the element is not already checked, if it is checked 
+    // then only it clicks on an element.
+
+    // toBeChecked() - 
+
+    await page.getByRole("radio", {name:'Female'}).check()
+    await expect(page.getByRole("radio", {name:'Female'})).toBeChecked()
+
+    await page.locator("#wednesday").check()
+    await expect(page.locator("#wednesday")).toBeChecked()
+    await page.locator("#wednesday").uncheck()
+    await expect(page.locator("#wednesday")).not.toBeChecked()
+
+    // Assignment - Click on all checkbox
+
+})
+
+test("Get the text value from an element", async ({page})=>{
+    await page.goto("https://testautomationpractice.blogspot.com/")
+
+    // textContent() - Return the text value of an element even if the element is not
+    // visible on the page
+
+    // innerText() - Return the text value ONLY from the visible element on the page
+    
+    const text  = await page.locator("h1.title").innerText()
+    await expect(text).toContain("Automation Testing Practice")
+    console.log(text)
+
+    // allTextContents()
+    // allInnerTexts()
+
+    const allTexts = await page.locator("h2.title").allTextContents()
+    console.log(allTexts)
+     
+})
