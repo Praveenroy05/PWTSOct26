@@ -3,7 +3,7 @@
 // right click - click()
 // Mouse hover - hover()
 // scrolling - scrollIntoViewIfNeeded()
-// drag and drop 
+// drag and drop  - Locator.dragTo(Locator)
 
 import {test, expect} from '@playwright/test'
 
@@ -50,7 +50,28 @@ test("Handling mouse over on an element", async ({page})=>{
     await expect(page.getByTestId("test-id-Baggage Information")).toHaveText("Baggage Information")
 })
 
+test("Handle drag and drop", async ({page})=>{
+    await page.goto("https://testautomationpractice.blogspot.com/")
+    const sourceLocator = page.locator("div#draggable")
+    const targetLocator = page.locator("div#droppable")
 
-// drag and drop 
+    // Locator.dragTo(locator)
+
+   // await sourceLocator.dragTo(targetLocator)
+
+    await sourceLocator.hover()
+    await page.mouse.down()
+    await targetLocator.hover()
+    await page.mouse.up()
+
+
+
+    await expect(page.locator("div#droppable p")).toHaveText("Dropped!")
+    await page.waitForTimeout(2000)
+
+})
+
+
+// drag and drop - locator.dragTo(locator)
 // drop down
 
