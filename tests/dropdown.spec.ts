@@ -45,7 +45,7 @@
 
 import {test, expect} from '@playwright/test'
 
-test("Handling drop down element developed using <select> tag", async ({page})=>{
+test("Handling drop down element developed using <select> tag", async function({page}){
     
     // 1. Launch the url
     await page.goto("https://practice.expandtesting.com/dropdown")
