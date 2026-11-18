@@ -1,6 +1,6 @@
 import {test, expect} from '@playwright/test'
 
-test("Login into application using valid credentials", async ({page})=>{
+test("Login into application using valid credentials", async function({page}){
 
     // Goto the url
     // Fill the username

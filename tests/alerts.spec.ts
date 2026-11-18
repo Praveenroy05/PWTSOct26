@@ -4,7 +4,7 @@
 // 2. Confirm Alert - Yes/No, Submit/Cancel
 // 3. Prompt Alert - Along with Yes/No - textbox as well
 
-// "dialog" event
+// "dialog" event - alert
 // "popup" event - Child windows/tab/page
 
 // Step by step process to handle alerts
