@@ -49,7 +49,10 @@ export default defineConfig({
     trace: 'on',
     screenshot: 'on',
     video: 'on',
-    headless: false
+    headless: false,
+    launchOptions:{
+      slowMo:1000
+    }
   },
 
   /* Configure projects for major browsers */
